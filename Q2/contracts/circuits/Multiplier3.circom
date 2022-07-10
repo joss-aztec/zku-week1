@@ -7,11 +7,13 @@ template Multiplier3 () {
    // Declaration of signals.  
    signal input a;  
    signal input b;
+   signal x; // internal
    signal input c;
    signal output d;  
 
-   // Constraints.  
-   d <== a * b * c;  
+   // Constraints.
+   x <== a * b;
+   d <== x * c;  
 }
 
 component main = Multiplier3();
